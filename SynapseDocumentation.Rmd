@@ -3,7 +3,7 @@ title: "DataOrganizationSynapse"
 output: html_document
 ---
 
-## Synapse
+## Few words about getting started Synapse
 
 This is just for my own short RAM that I am unable to upgrade and if it helps anybody else too.
 
@@ -22,6 +22,8 @@ For getting started follow some introductions here:
 
 * By default data downloaded from Synapse is cached at user’s home directory and is called .synapseConfig unless specified; We can fix it in .synapseConfig file to a new  cache location too.
 
+* Note:does not work with reticulate packahge in one session 
+
 ```{r message=FALSE}
 #install.packages("synapser", repos = c("http://ran.synapse.org", "http://cran.fhcrc.org"))
 #if( !require(devtools) ) install.packages( "devtools" )
@@ -30,7 +32,7 @@ library(synapser)
 library(synExtra)
 ```
 
-## login details 
+## login to Synapse 
 How to configure login details Long Story read @https://r-docs.synapse.org/articles/manageSynapseCredentials.html
 
 short story here 
