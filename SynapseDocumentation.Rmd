@@ -2,6 +2,14 @@
 title: "DataOrganizationSynapse"
 output: rmarkdown::github_document
 ---
+## Example projects 
+
+https://www.synapse.org/#!Synapse:syn300013/wiki/27406
+
+https://www.synapse.org/#!Synapse:syn1721874/wiki/27329
+
+https://www.synapse.org/#!Synapse:syn1899339/wiki/59912
+
 
 ## Few words about getting started Synapse
 
@@ -92,16 +100,50 @@ files <- synapserutils::syncFromSynapse('syn24606760', path="/Users/siddia/Deskt
   
 ```
 
-##  
+##  Tables updates 
 
+* Tables can be built up by adding sets of rows that follow a user-defined schema and queried using a SQL-like syntax.
+
+* synBuildTable creates a Table Schema based on the data and returns a Table object that can be stored in Synapse using synStore(). 
+
+* read more @ https://r-docs.synapse.org/articles/tables.html
 
 
 ```{r }
+#set working directory to where your data is present 
+#setwd("/path/to/YourSynapseTableToUpdate")
 
+#read data to include in table 
+#data<-read.delim("FileToUpdate.csv", sep=",")
+
+#synBuildTable creates a Table Schema based on the data and returns a 
+#Table object that can be stored in Synapse using synStore()
+#args 
+#--> name of table in synapse project e.g TestTable would be there in your synapse project
+#--> the project in Synapse to which this table belongs
+#--> name of data object that you just created 
+#table <- synBuildTable("TestTable", "syn123456", data)
+#table <- synStore(table)
+#table$schema
 ```
-
-
+## Provenance 
+Synapse provides tools for tracking ‘provenance’, or the transformation of raw data into processed results, by linking derived data objects to source data and the code used to perform the transformation.
+* input in used argument  
+* script file in executed argument 
 ```{r }
+#Creating an activity object:
+# act <- Activity(
+#   name = "clustering",
+#   description = "whizzy clustering",
+#   used = c("syn1234", "syn1235"),
+#   executed = "syn4567")
+
+
+#Storing entities with provenance
+# project <- synGet(project$properties$id)
+# project <- synStore(project, activity = act)
+# We’ve now recorded that ‘project’ is the output of syn4567 applied to the data stored in syn1234 and syn1235.
+
 
 ```
 
