@@ -121,45 +121,4 @@ synExtra::synStoreMany( "/Users/siddia/Desktop/SynapseTestProject", parent="syn2
 #synExtra::synStoreMany( "../myOtherFolder", "syn12180284" )
 ```
 
-``` r
-#project <- Project( "TestProjectAmnah")
-#project <- synStore(project)
-```
-
-``` r
-#project <- Project( "TestProjectAmnah")
-#project <- synStore(project)
-```
-
-## 
-
-You can also embed plots, for example:
-
-``` r
-# #Adding files to the project:
-#   filestoupload<-list.files("/Users/siddia/Google Drive/Codes2020_SiddiqaAmnah/Synapse/CiberSort/")
-#   path=("/Users/momo/Google Drive/Literature/AntibodyResponsePredictionBaseline/HIPCCHI/")
-#   
-#   
-#   
-#   #dataFolder can be a child folder or project itself 
-#   for(i in 1:length(filestoupload)) {
-#   file <- File(path = paste0(path,filestoupload[i]), parent = "syn23532082")
-#   file <- synStore(file)
-#   }
-```
-
-``` r
-# Load required libraries
-# library(synapser)
-# library(synapserutils)
-
-# login to Synapse
-#synLogin(email='me@example.com', password='secret', rememberMe=TRUE)
-# synLogin()
-# download all the files in folder syn123 to a local folder called "myFolder"
-#all_files = syncFromSynapse(entity='syn24215009', path='/Users/siddia/Desktop/SynapsePlaying')
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to
-prevent printing of the R code that generated the plot.
+##
