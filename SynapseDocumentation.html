@@ -391,6 +391,7 @@ summary {
 <li><p>Examples of setting up synapse config files parameters @ <a href="https://github.com/Sage-Bionetworks/synapsePythonClient/blob/master/synapseclient/.synapseConfig" class="uri">https://github.com/Sage-Bionetworks/synapsePythonClient/blob/master/synapseclient/.synapseConfig</a></p></li>
 <li><p>We have three options to set up login. If you dont need to deal with other clients frequently e.g AWS-S3 etc synLogin is enough otherwise you can setup configuration file as mentioned above.</p></li>
 <li><p>By default data downloaded from Synapse is cached at user’s home directory and is called .synapseConfig unless specified; We can fix it in .synapseConfig file to a new cache location too.</p></li>
+<li><p>Note:does not work with reticulate package in one session</p></li>
 </ul>
 <pre class="r"><code>#install.packages(&quot;synapser&quot;, repos = c(&quot;http://ran.synapse.org&quot;, &quot;http://cran.fhcrc.org&quot;))
 #if( !require(devtools) ) install.packages( &quot;devtools&quot; )
@@ -413,8 +414,44 @@ library(synExtra)</code></pre>
 <div id="updating-a-data-directory-with-complex-structure-in-synapse" class="section level3">
 <h3>Updating a data directory with complex structure in Synapse</h3>
 <p>library(synExtra) has all the cool things to do here for us.</p>
-<pre class="r"><code>#project &lt;- Project( &quot;TestProjectAmnah&quot;)
-#project &lt;- synStore(project)</code></pre>
+<p>To add a new directory with all complex directory structure:</p>
+<ul>
+<li><p>pass the synapse project id and local path</p></li>
+<li><p>still playing with versions : pulled the issue</p></li>
+<li><p>read more on versions of files @ <a href="https://docs.synapse.org/articles/files_and_versioning.html" class="uri">https://docs.synapse.org/articles/files_and_versioning.html</a></p></li>
+</ul>
+<pre class="r"><code>synExtra::synStoreMany( &quot;/Users/siddia/Desktop/SynapseTestProject&quot;, parent=&quot;syn24215009&quot;)</code></pre>
+<pre><code>## Creating SynapseTestProject 
+## 
+## 
+## 
+## Creating SomeData 
+## Creating Data1 
+## 
+## 
+## 
+## Creating Data2 
+## 
+## 
+## 
+## Creating Data3 
+## 
+## 
+## 
+## Creating Data4 
+## 
+## 
+## 
+## Creating Data4 copy 
+## 
+## 
+## 
+## Creating SuppCIBERSORT</code></pre>
+<pre class="r"><code>## The function understands local paths
+#synExtra::synStoreMany( &quot;.&quot;, &quot;syn12180284&quot; )
+
+## As well as relative paths
+#synExtra::synStoreMany( &quot;../myOtherFolder&quot;, &quot;syn12180284&quot; )</code></pre>
 <pre class="r"><code>#project &lt;- Project( &quot;TestProjectAmnah&quot;)
 #project &lt;- synStore(project)</code></pre>
 <pre class="r"><code>#project &lt;- Project( &quot;TestProjectAmnah&quot;)
