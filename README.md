@@ -16,3 +16,7 @@ https://r-docs.synapse.org/articles/manageSynapseCredentials.html
 
 ### Synapse Config file handy example @ 
 * Examples of setting up synapse config files parameters @ https://github.com/Sage-Bionetworks/synapsePythonClient/blob/master/synapseclient/.synapseConfig
+
+
+
+Author: amnah.siddiqa@jax.org
