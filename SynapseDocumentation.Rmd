@@ -7,9 +7,9 @@ output: rmarkdown::github_document
 
 This is just for my own short RAM that I am unable to upgrade and if it helps anybody else too.
 
-* I consider Synapse as data-Github- I would prefer to keep all versions scripts in Git and all different versions of data in Synapse
+* Keeping all versions scripts in Git and all different versions of data in Synapse
 
-* I prefer to use markdown files instead of scripts files as well unless i am integrating a full workflow.
+* Would prefer use markdown files instead of scripts files as well unless i am integrating a full workflow.
 
 For getting started follow some introductions here:
 
