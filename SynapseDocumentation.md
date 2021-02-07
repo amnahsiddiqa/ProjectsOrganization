@@ -69,13 +69,15 @@ synLogin()
 
 ### Updating a data directory with complex structure in Synapse
 
-library(synExtra) has all the cool things to do here for us.
+library(synExtra) does this cool thing.
 
 To add a new directory with all complex directory structure:
 
   - pass the synapse project id and local path
 
-  - still playing with versions : pulled the issue
+  - still playing with versions : pulled the issue at synExtra too and
+    for my memory here too
+    <https://github.com/amnahsiddiqa/SynapseThingies/issues/1>
 
   - read more on versions of files @
     <https://docs.synapse.org/articles/files_and_versioning.html>
@@ -111,7 +113,46 @@ synExtra::synStoreMany( "/Users/siddia/Desktop/SynapseTestProject", parent="syn2
     ## 
     ## 
     ## 
-    ## Creating SuppCIBERSORT
+    ## Creating SuppCIBERSORT 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## 
+    ## Creating test 
+    ## Creating Data1 
+    ## 
+    ## 
+    ## 
+    ## ################################################## Uploading file to Synapse storage ##################################################
+    ## Creating Data2 
+    ## 
+    ## 
+    ## 
+    ## ################################################## Uploading file to Synapse storage ##################################################
+    ## Creating Data3 
+    ## 
+    ## 
+    ## 
+    ## ################################################## Uploading file to Synapse storage ##################################################
+    ## Creating Data4 
+    ## 
+    ## 
+    ## 
+    ## ################################################## Uploading file to Synapse storage ##################################################
+    ## Creating Data4 copy 
+    ## 
+    ## 
+    ## 
+    ## ################################################## Uploading file to Synapse storage ##################################################
+    ## ################################################## Uploading file to Synapse storage ##################################################
 
 ``` r
 ## The function understands local paths
@@ -119,6 +160,23 @@ synExtra::synStoreMany( "/Users/siddia/Desktop/SynapseTestProject", parent="syn2
 
 ## As well as relative paths
 #synExtra::synStoreMany( "../myOtherFolder", "syn12180284" )
+```
+
+## Bulk download data with file system heirarchy intact
+
+entity  
+A Synapse ID, a Synapse Entity object of type folder or project.
+
+path  
+An optional path where the file hierarchy will be reproduced. If not
+specified the files will by default be placed in the synapseCache.
+
+ifcollision Determines how to handle file collisions. May be
+“overwrite.local”, “keep.local”, or “keep.both”. Defaults to
+“overwrite.local”.
+
+``` r
+files <- synapserutils::syncFromSynapse('syn24606760', path="/Users/siddia/Desktop/SynapseTestProject/test") 
 ```
 
 ##
