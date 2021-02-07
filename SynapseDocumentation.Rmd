@@ -57,7 +57,7 @@ To add a new directory with all complex directory structure:
 
 * read more on versions of files @ https://docs.synapse.org/articles/files_and_versioning.html
 
-```{r }
+```{r}
 
 synExtra::synStoreMany( "/Users/siddia/Desktop/SynapseTestProject", parent="syn24215009")
   
