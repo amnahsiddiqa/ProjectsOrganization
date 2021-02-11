@@ -28,8 +28,9 @@ The whole idea is very simple and I would follow it like this for collaboration:
 * At the end of every Task, I need to do only two things:
    * push to git repo of project
    * update synapse (I use same three liner at the end of evey notebook in  whole project for updates with a single synapse parent project id. This keep my synspase project synced with the project directory on my local machine) 
+   * provenance on synapse is another story:Detials to add later.
 
-* One last note: The html files rendered in Rmd ..Dropbox Sync note to add
+* One last note: The html files rendered in Rmd .. Dropbox Sync note to add later.
    
  #### To Replicate Analysis:
  In order to replicate analysis in a project, the idea is that following steps should work and be able to walkthrough anybody else through whole project:
