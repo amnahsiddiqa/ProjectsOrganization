@@ -28,9 +28,9 @@ The whole idea is very simple and I would follow it like this for collaboration:
 * One last note: The html files rendered in Rmd 
    
  #### To Replicate Analysis:
- In order to replicate analysis in a project, the idea is that followinf steps should work and walkthrough anybody else:
+ In order to replicate analysis in a project, the idea is that following steps should work and be able to walkthrough anybody else through whole project:
  
- * Download git repo 
+ * Download git repo of project
  * Follow instructions at main ReadMe.md
  * Rest every notebook's comments should provide enough additional information about each step of analysis
  * to follow discussions and comments, as a good practice try maintaining wiki page of synapse child folder for that notebook. 
