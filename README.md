@@ -11,7 +11,7 @@ The whole idea is very simple and I would follow it like this for collaboration:
 * All data in data folders in separate directories. One directory dedicated to immutable data and rest as needed. For every project's metadata or any other supporting data (could be anything), It would depend if its needed to be in same heirachichal level as data or inside child data directories.   
 
 * All code in notebooks (Jupyter/Rmd) in separate directories.
-   * I like to keep one workflow notebook and put supplementary functions in source files ( be them .R, .py ).
+   * I like to keep one workflow notebook and put supplementary functions in source files ( be them .R, .py ). I am an R person so I use Rmd but ofcourse that could be a bash/python/jupytrt notebook/whatever you like workflow  script/md.
    
    * Blue box on LHS: One child level notebook dedicated to one task/question in main project. And the workflow notebook should be able to get up and running by setting paths     only.The input data should be sourced from data directory. However depending on a project I might end up with some supplementary data required for that task only-  so I would keep it inside the notebook directory and source it from there.
    
@@ -23,8 +23,9 @@ The whole idea is very simple and I would follow it like this for collaboration:
    
 * At the end of every Task, I need to do only two things:
    * push to git repo of project
-   * update synapse (I use same three liner at the end of evey notebook in  whole project to with a single synapse parent project id to keep my synspase project synced in file system level the same as on my local machine) 
-   
+   * update synapse (I use same three liner at the end of evey notebook in  whole project for updates with a single synapse parent project id. This keep my synspase project synced in file system level, the same as on my local machine) 
+
+* One last note: The html files rendered in Rmd 
    
  #### To Replicate Analysis:
  In order to replicate analysis in a project, the idea is that followinf steps should work and walkthrough anybody else:
