@@ -21,7 +21,7 @@ The whole idea is very simple and I would follow it like this for collaboration:
    
    * Red Box on RHS: Results/Output from a child notebook directory would end up in the same notebook directory for me.
    
-   * Just to keep another copy intact, I would update after every finished task the synapse project folder. Besides many others, two key advantages I save a backup and second sometimes analysis is much complex and can take several hours of CPU time to run and it would be easier for collaborators to explore more on the same data that i produced.
+   * Just to keep another copy intact, I would update after every finished task the synapse project folder. Besides many others, two key advantages I save a backup and second sometimes analysis is much complex and can take several hours of CPU time to run and it would be easier for collaborators/contributors to explore more on the same data that i produced for time being and verify analysis in their own time.
    
    
    
