@@ -8,7 +8,9 @@ The way I am adopting my project organization is inspired by minimal data analys
 
 The whole idea is very simple and I would follow it like this for collaboration:
 
-* All data in data folders in separate directories. One directory dedicated to immutable data (raw data) and rest as needed. For every project's metadata or any other supporting data (could be anything), It would depend if its needed to be in same heirachichal level as data or inside child data directories.   
+* All data in data folders in separate directories. 
+  * One directory dedicated to immutable data (raw data) and rest as needed. 
+  * For every project's metadata or any other supporting data (could be anything), It would depend if its needed to be in same heirachichal level as data or inside child data directories.   
 
 * All code in notebooks (Jupyter/Rmd) in separate directories.
    * I like to keep one workflow notebook and put supplementary functions in source files ( be them .R, .py ). I am an R person so I use Rmd but ofcourse that could be a bash/python/jupytrt notebook/whatever you like workflow  script/md.
