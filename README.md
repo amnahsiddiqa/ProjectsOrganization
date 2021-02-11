@@ -3,6 +3,8 @@
 
 The way I am adopting my project organization is inspired by minimal data analysis template @ (https://github.com/shuzhao-li/cookiecutter-data-science-min). For my quick reference @ [Wiki](https://github.com/amnahsiddiqa/ProjectsOrganization/wiki/CookieCutter). 
 
+Note: Syncing Synapse and local machine project directories. In future projects --> local machine replaced by Sumner.
+
 
 ![](Figures/ProjectOrganization.png?raw=true)
 
